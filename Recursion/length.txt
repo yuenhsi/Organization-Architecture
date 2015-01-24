@@ -1,0 +1,4 @@
+We used arbitrary registers ($a0, $t2, $t0) in our procedure which worked as parameters for the main method. We used the stack to store the return addresses such that the jal method recursively references itself until the base case is reached, after which we pop the stack until the return address references the main method outside the procedure. 
+
+
+Our code is relatively efficient, as we did not store redundant values, namely the value of the array indexes, within the stack. On top of that, as recursion is more efficient than loops in most cases, our method to calculate the length of the array should be superior to the traditional method of iteration. 
